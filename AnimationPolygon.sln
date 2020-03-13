@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationPolygon", "AnimationPolygon\AnimationPolygon.csproj", "{3CE7DBA4-2937-4F65-99C5-02FEF5C9EAD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CE7DBA4-2937-4F65-99C5-02FEF5C9EAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE7DBA4-2937-4F65-99C5-02FEF5C9EAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE7DBA4-2937-4F65-99C5-02FEF5C9EAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE7DBA4-2937-4F65-99C5-02FEF5C9EAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4F32B70-FCC7-4490-98DE-7BBA8912DDFE}
+	EndGlobalSection
+EndGlobal
