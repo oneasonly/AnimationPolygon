@@ -15,29 +15,69 @@
                     CommandTarget="{Binding ElementName=Transitioner1}"
                     />
             <Button x:Name="button2" Content="Prev"
-                    Command="{x:Static md:Transitioner.MovePreviousCommand}"
                     CommandTarget="{Binding ElementName=Transitioner1}"
+                    Command="{x:Static md:Transitioner.MovePreviousCommand}"                    
                     />
-            
-            <md:Transitioner SelectedIndex="0" x:Name="Transitioner1">
+            <Button x:Name="button22" Content="PrevTest"
+                    Command="{Binding ElementName=Transitioner1, Path=MovePreviousCommand}"     
+                    
+                    />
 
-                <StackPanel Margin="5">
-                    <Button Content="A"/>
-                    <Button Content="Next" Command="{x:Static md:Transitioner.MoveNextCommand}" />
-                    <Button Content="C"/>
-                    <Button Content="D"/>
-                </StackPanel>
+            <md:Transitioner SelectedIndex="0" x:Name="Transitioner1" AutoApplyTransitionOrigins="False" >
 
-                <UniformGrid  Rows="2" Columns="2" Margin="5">
-                    <Button Content="K"/>
-                    <Button Content="Prev" Command="{x:Static md:Transitioner.MovePreviousCommand}" />
-                    <Button Content="M"/>
-                    <Button Content="N"/>
-                </UniformGrid>
-                
-                <Button Content="page3" Margin="5" />
+                <md:TransitionerSlide  >
+                    <md:TransitionerSlide.BackwardWipe>
+                        <md:SlideWipe />
+                    </md:TransitionerSlide.BackwardWipe>
+                    <md:TransitionerSlide.ForwardWipe>
+                        <md:FadeWipe />
+                    </md:TransitionerSlide.ForwardWipe>
+                    <UniformGrid  Rows="2" Columns="2" Margin="5" >
+                        <Button Content="K"/>
+                        <Button Content="Next" Command="{x:Static md:Transitioner.MoveNextCommand}" />
+                        <Button Content="M"/>
+                        <Button Content="N"/>
+                    </UniformGrid>
+                </md:TransitionerSlide>
+
+                <md:TransitionerSlide >
+                    <md:TransitionerSlide.BackwardWipe>
+                        <md:SlideWipe />
+                    </md:TransitionerSlide.BackwardWipe>
+                    <md:TransitionerSlide.ForwardWipe>
+                        <md:FadeWipe />
+                    </md:TransitionerSlide.ForwardWipe>
+                    <StackPanel Margin="5"  >
+                        <Button Content="A"/>
+                        <Button Content="Prev" Command="{x:Static md:Transitioner.MovePreviousCommand}" />
+                        <Button Content="C"/>
+                        <Button Content="D"/>
+                    </StackPanel>
+                </md:TransitionerSlide>
+
+                <md:TransitionerSlide >
+                    <md:TransitionerSlide.BackwardWipe>
+                        <md:SlideWipe />
+                    </md:TransitionerSlide.BackwardWipe>
+                    <md:TransitionerSlide.ForwardWipe>
+                        <md:FadeWipe />
+                    </md:TransitionerSlide.ForwardWipe>
+                    <Button Content="page3" Margin="5" Command="{x:Static md:Transitioner.MovePreviousCommand}" />
+                </md:TransitionerSlide>
 
             </md:Transitioner>
+
+            <md:TransitioningContent OpeningEffect="{md:TransitionEffect ExpandIn}">
+                
+            </md:TransitioningContent>
+
+            <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn}">
+
+            </md:TransitioningContent>
+
+            <md:TransitioningContent OpeningEffect="{md:TransitionEffect SlideInFromLeft}">
+
+            </md:TransitioningContent>
 
         </StackPanel>
     </Grid>
