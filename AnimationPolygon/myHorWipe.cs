@@ -8,7 +8,7 @@ using System.Windows.Media.Animation;
 
 namespace AnimationPolygon
 {
-    public class myWipe : ITransitionWipe
+    public class myHorWipe : ITransitionWipe
     {
         private readonly SineEase _sineEase = new SineEase();
 
@@ -20,7 +20,7 @@ namespace AnimationPolygon
         /// <summary>
         /// Duration of the animation
         /// </summary>
-        public TimeSpan Duration { get; set; } = TimeSpan.FromSeconds(0.8);
+        public TimeSpan Duration { get; set; } = TimeSpan.FromSeconds(0.9);
 
         public void Wipe(TransitionerSlide fromSlide, TransitionerSlide toSlide, Point origin, IZIndexController zIndexController)
         {

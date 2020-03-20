@@ -26,16 +26,13 @@
                     Command="{Binding ElementName=Transitioner1, Path=MovePreviousCommand}"                    
                     />
 
-            <md:Transitioner SelectedIndex="0" x:Name="Transitioner1" AutoApplyTransitionOrigins="True">
+            <md:Transitioner SelectedIndex="0" x:Name="Transitioner1" AutoApplyTransitionOrigins="False">                
 
                 <md:TransitionerSlide  >
                     <md:TransitionerSlide.ForwardWipe>
-                        <md:SlideOutWipe/>
+                        <local:myHorWipe Direction="Right"/>
                     </md:TransitionerSlide.ForwardWipe>
-                    <md:TransitionerSlide.BackwardWipe>
-                        <md:SlideOutWipe/>
-                    </md:TransitionerSlide.BackwardWipe>
-                    
+
                     <UniformGrid  Rows="2" Columns="2" Margin="5" Height="auto" >
                         <Button Content="K"/>
                         <Button Content="L"/>
@@ -48,11 +45,8 @@
 
                 <md:TransitionerSlide >
                     <md:TransitionerSlide.ForwardWipe>
-                        <md:SlideOutWipe/>
+                        <local:myHorWipe Direction="Right"/>
                     </md:TransitionerSlide.ForwardWipe>
-                    <md:TransitionerSlide.BackwardWipe>
-                        <md:SlideOutWipe/>
-                    </md:TransitionerSlide.BackwardWipe>
                     
                         <StackPanel Margin="5"  Height="auto">
                         <Button Content="A"/>
@@ -68,11 +62,8 @@
 
                 <md:TransitionerSlide >
                     <md:TransitionerSlide.ForwardWipe>
-                        <md:SlideOutWipe/>
+                        <local:myHorWipe Direction="Right"/>
                     </md:TransitionerSlide.ForwardWipe>
-                    <md:TransitionerSlide.BackwardWipe>
-                        <md:SlideOutWipe/>
-                    </md:TransitionerSlide.BackwardWipe>
 
                     <Button Content="Prev" Margin="5" Command="{x:Static md:Transitioner.MovePreviousCommand}" />
                 </md:TransitionerSlide>
